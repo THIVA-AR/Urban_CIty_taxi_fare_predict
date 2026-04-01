@@ -1,21 +1,48 @@
 import streamlit as st
+import base64
+ 
+st.set_page_config(layout="wide")
+ 
+def get_base64_image(image_path):
+     with open(image_path, "rb") as f:
+         data = f.read()
+     return base64.b64encode(data).decode()
+ 
+image_path = r"C:\Users\user\Documents\guvi\guvi project 1\third project\taxi_bg.png"
+encoded = get_base64_image(image_path)
+ 
+ # Inject CSS to add the background
+st.markdown(
+     f"""
+     <style>
+     .stApp {{
+         background-image: url("data:image/webp;base64,{encoded}");
+         background-size: cover;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-position: center;
+     }}
+     </style>
+     """,
+     unsafe_allow_html=True
+)
 st.markdown("""
     <div style="
         background-color: black;
         border-radius: 16px;
-        padding: 18px 8px;
-        margin-bottom: 24px;
+        padding: 12px 6px;
+        margin-bottom: 20px;
         text-align: center;
         display: inline-block;
         width: 100%;
     ">
         <h1 style="
-            color: blue;
-            -webkit-text-stroke: 2px pink;
+            color: white;
+            -webkit-text-stroke: 2px blue;
             font-weight: bold;
             margin: 0;
         ">
-            🚕 Taxi Fare Prediction 🚕
+            🚕 Urban City Taxi Fare Prediction 🚕
         </h1>
     </div>
 """, unsafe_allow_html=True)
