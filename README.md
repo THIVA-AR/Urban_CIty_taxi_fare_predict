@@ -1,4 +1,9 @@
 # Third_project_taxi_fare_predict
+
+Problem Statement for Understanding
+       As a Data Analyst at an urban mobility analytics firm. Your mission is to unloack insights from real-world taxi trip data to enhance fare estimation systems and promote pricing transperancy for passengers. This project focuses on analyzing historical taxi trip records collected from a metropolitan transportation network.
+The goal is to build a predictive model that accuracy estimates the total taxi fare amount based on various ride-related featues. Learners will preprocess the raw data, engineer meaningful features, handle data quality issues, train and evaluate multiple regression models, and finally deploy the best-performing model using Streamlit.
+       
 # Taxi Fare Prediction: End-to-End Machine Learning Project
 ## Overview
 This project focuses on predicting the total fare amount for taxi rides in New York City using machine learning. The objective was to develop an accurate regression model from real trip data, transform and engineer useful features, and deploy a user-friendly web application for interactive predictions.
