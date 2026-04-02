@@ -8,7 +8,7 @@ def get_base64_image(image_path):
          data = f.read()
      return base64.b64encode(data).decode()
  
-image_path = r"C:\Users\user\Documents\guvi\guvi project 1\third project\taxi_bg.png"
+image_path = r"C:\Users\user\Documents\guvi\guvi project 1\third project\bg_taxi.png"
 encoded = get_base64_image(image_path)
  
  # Inject CSS to add the background
